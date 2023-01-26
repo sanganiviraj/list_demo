@@ -27,7 +27,8 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Color(0XFFecedf4),
         appBar: _buildAppBar(),
         body: Stack(
-          children: [ Container(
+          children: [
+            Container(
             padding: EdgeInsets.symmetric(horizontal:  20,vertical: 15),
             child: (
             Column(children: [
@@ -41,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                     ),
                     for (Todo todo in todos_list)
                       todo_item(
-                            Todos_items: todo,
+                        Todos_items: todo,
                         todochange: _handletodolist,
                         tododeleteitem: _deletitem,
                           ),
@@ -60,8 +61,7 @@ class _MyAppState extends State<MyApp> {
                     margin: EdgeInsets.only(
                       bottom: 20,
                       right: 20,
-                      left: 20
-
+                      left: 20,
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                     decoration: BoxDecoration(
@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
                       style: ElevatedButton.styleFrom(
                         primary: Colors.blueAccent,
                         minimumSize: Size(60, 60),
-                        elevation: 10
+                        elevation: 10,
                       ),
                     ),
                   )
@@ -130,7 +130,9 @@ class _MyAppState extends State<MyApp> {
 
 
 
-  Widget searchbox(){
+
+
+  Widget searchbox() {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -139,7 +141,7 @@ class _MyAppState extends State<MyApp> {
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: TextField(
         decoration: InputDecoration(
-            prefixIcon: Icon(Icons.search,size: 20,color: Colors.black,),
+            prefixIcon: Icon(Icons.search, size: 20, color: Colors.black,),
             prefixIconConstraints: BoxConstraints(
                 maxHeight: 20,
                 minWidth: 25
@@ -151,6 +153,7 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
 
   AppBar _buildAppBar() {
     return AppBar(

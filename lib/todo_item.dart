@@ -3,6 +3,7 @@ import 'package:todolist/todo.dart';
 
 class todo_item extends StatelessWidget {
   final Todo Todos_items;
+
   final todochange;
   final tododeleteitem;
 
